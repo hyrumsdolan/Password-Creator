@@ -7,15 +7,63 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
       <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+        <div class="criteria">
+          <div>
+            <input
+              type="number"
+              id="passLength"
+              placeholder="Choose character length (8-128)"
+            />
+          </div>
+
+          <div class="switch-container">
+            <div class="switch-wrapper">
+              <div class="switch-label">Lowercase</div>
+              <label class="switch">
+                <input type="checkbox" id="lowercase">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          
+            <div class="switch-wrapper">
+              <div class="switch-label">Uppercase</div>
+              <label class="switch">
+                <input type="checkbox" id="uppercase">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          
+            <div class="switch-wrapper">
+              <div class="switch-label">Numeric</div>
+              <label class="switch">
+                <input type="checkbox" id="numeric">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          
+            <div class="switch-wrapper">
+              <div class="switch-label">Special Characters</div>
+              <label class="switch">
+                <input type="checkbox" id="special">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          
+          
+          
+
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
         </div>
+
         <div class="card-body">
           <textarea
             readonly
@@ -23,23 +71,9 @@
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-          <label for="length">Password Length:</label>
-<input type="number" id="length" min="8" max="128" value="12">
-<div class="criteria">
-  <input type="checkbox" id="lowercase" checked>
-  <label for="lowercase">Lowercase</label>
-  <input type="checkbox" id="uppercase">
-  <label for="uppercase">Uppercase</label>
-  <input type="checkbox" id="numeric">
-  <label for="numeric">Numeric</label>
-  <input type="checkbox" id="special">
-  <label for="special">Special Characters</label>
-</div>
+        </div>
+        <button id="copyBtn" class="btn">Copy to Clipboard</button>
 
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
       </div>
     </div>
     <script src="script.js"></script>
