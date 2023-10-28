@@ -93,6 +93,25 @@ button[disabled] {
   background: #c0c7cf;
 }
 
+.criteria {
+  margin-top: 20px;
+}
+
+.criteria input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label {
+  margin-right: 20px;
+}
+
+input[type="number"] {
+  width: 60px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+
 .float-right {
   float: right;
 }
